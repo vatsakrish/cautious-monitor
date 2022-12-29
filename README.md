@@ -1,7 +1,7 @@
-# SOFT
+# Cautious_Monitor
 ### Project to extract System data by Team Falcon
 
-##  SOFT can monitor
+##  Cautious_Monitor can monitor
 ###  -- Application health, 
 ###  -- Container Health (Ram, CPU, Disk, Load, etc) 
 ###  -- Verify if services/processes are running
@@ -23,7 +23,7 @@
     mvn clean install -DskipTests
 
 ## Execute
-    Run the jar in the target folder - \sml_service\target: { java -jar SOFT-1.0.0.jar }
+    Run the jar in the target folder - \sml_service\target: { java -jar Cautious_Monitor-1.0.0.jar }
 
 ## Current Schedule in Config
 
@@ -110,7 +110,7 @@ Parameters:
 
 ### start.sh
     #!/bin/bash
-    /usr/local/lib64/jdk8u202-b08/bin/java -Dserver.port=9254 -Dspring.config.location=/h/hw/runnable_jars/soft_metrics/config/soft-service-metrics.yml -Dlog4j.configurationFile=file:/h/hw/runnable_jars/soft_metrics/config/log4j2.properties -Xmx1024M -Xms256M -jar "/h/hw/runnable_jars/soft_metrics/soft-metrics-extractor-0.0.13.jar" &> /h/hw/runnable_jars/soft_metrics/soft_console.log &
+    /usr/local/lib64/jdk8u202-b08/bin/java -Dserver.port=9254 -Dspring.config.location=c:/Cautious_Monitor_metrics/config/Cautious_Monitor-service-metrics.yml -Dlog4j.configurationFile=file:Cautious_Monitor_metrics/config/log4j2.properties -Xmx1024M -Xms256M -jar "c:/Cautious_Monitor_metrics/Cautious_Monitor-metrics-extractor-0.0.13.jar" &> c:/Cautious_Monitor_metrics/Cautious_Monitor_console.log &
     exit 0
 
 ### Top Level Architecture
