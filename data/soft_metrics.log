@@ -1,0 +1,134 @@
+{
+	"dateTime": "2021/04/01 10:19:32",
+	"uniqueid": "c903292f-c1c4-40fa-bcfa-d9fa740c2efa",
+	"projectName": "CloudStorage",
+	"store": "3144",
+	"province": "ON",
+	"responseCode": 200,
+	"responseTime": 555,
+	"methodName": "get",
+	"requestId": "1234",
+	"buildVersion": "21.1.0.21_1",
+	"IP": "10.59.131.193"
+}
+{
+	"dateTime": "2021/03/23 08:14:25",
+	"uniqueid": "015496bd-b08d-4389-a54c-3b50aca47cbc",
+	"store": "3144",
+	"message": "Send to Splunk"
+}
+{
+	"dateTime": "2021/03/23 07:40:34",
+	"store": "3144",
+	"message": "23-Mar-2021 07:30:32.073 INFO [tomcat-http--2] brave.Tracing$LoggingReporter.report {\"traceId\":\"7dc8af74d53fe4ba\",\"id\":\"7dc8af74d53fe4ba\",\"kind\":\"SERVER\",\"name\":\"get\",\"timestamp\":1616506201509027,\"duration\":30564358,\"localEndpoint\":{\"serviceName\":\"hw-prescription\",\"ipv4\":\"10.59.131.193\"},\"remoteEndpoint\":{\"ipv4\":\"10.59.131.193\",\"port\":29052},\"tags\":{\"http.method\":\"GET\",\"http.path\":\"/prescription/actuator/health\"}}",
+	"fileName": "catalina.2021-03-23.log"
+}
+{
+	"dateTime": "2021/04/01 10:10:57",
+	"uniqueid": "55ded071-a7b1-46b0-bfb1-cf91fd61cfe9",
+	"projectName": "Application_Health_Metrics",
+	"store": "3144",
+	"province": "ON",
+	"responseTime": 2082,
+	"methodName": "app_health",
+	"buildVersion": "21.1.0.21_1",
+	"app_status": "{\"uaa-info\": {\"status\":\"DOWN\",\"httpCode\":200,\"error\":\"NA\"}, \"report\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"prescription\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"pharmacy-channel-service\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"mdp\": {\"status\":\"DOWN\",\"httpCode\":404,\"error\":\"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth\"}, \"ispilr\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"ispil\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"immunization\": {\"status\":\"DOWN\",\"httpCode\":404,\"error\":\"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth\"}, \"ieprocessor-health\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"hw\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"hda-healthwatchacl\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9392\"}, \"hda-eventrouter\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9393\"}, \"hda-event-processor\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9391\"}, \"dur\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"dispillwebservices-health\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"delta\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"config-server\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"claimutility-health\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"cf-service\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9443\"}, \"ber\": {\"status\":\"DOWN\",\"httpCode\":404,\"error\":\"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth\"}, \"be-services\": {\"status\":\"DOWN\",\"httpCode\":404,\"error\":\"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth\"}, \"atlas-ehealth-service\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9398\"}, \"aggregation\": {\"status\":\"DOWN\",\"httpCode\":404,\"error\":\"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth\"}, \"action-event-service\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"csjs\": {\"status\":\"UP\",\"httpCode\":200,\"error\":\"NA\"}, \"csdf\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:9253\"}, \"ade-service\": {\"status\":\"DOWN\",\"httpCode\":504,\"error\":\"iled: Connection refused: isp/10.59.131.193:8060\"}}",
+	"IP": "10.59.131.193",
+	"tomcat_server_status": "{\"/confTCServer\": {\"status\":\"UP\"},\"/uaaTCServer\": {\"status\":\"UP\"},\"/hwTCServer\": {\"status\":\"UP\"},\"/imzTCServer\": {\"status\":\"UP\"},\"servicesTCServer\": {\"status\":\"UP\"}}"
+}
+{
+	"dateTime": "2021/03/23 08:10:02",
+	"uniqueid": "3bafe927-8e6c-4853-b732-fea879028113",
+	"store": "3144",
+	"responseTime": 3,
+	"methodName": "store_details",
+	"queryResults": "[{\"LINE_ONE\":\"#20, 2410 - 22ND ST. W.\",\"LINE_TWO\":null,\"CITY\":\"SASKATOON\",\"POSTAL_CODE\":\"S7M 0V7\",\"PRIMARY_PHONE_NO\":\"3063825005\",\"ALTERNATE_PHONE_NO\":null,\"FAX_NO\":\"4164902544\",\"ACTIVE_FLAG\":\"Y\"}]"
+}
+{
+	"dateTime": "2021/03/23 08:09:00",
+	"uniqueid": "939a23ce-706f-4466-9082-204bc3cdf0ae",
+	"store": "3144",
+	"responseTime": 3,
+	"methodName": "store_features",
+	"queryResults": "[{\"DESCRIPTION\":\"CDR Enable Flag\",\"VALUE\":\"Y\"}, {\"DESCRIPTION\":\"Version of latest code\",\"VALUE\":\"20.4.0.6_1\"}, {\"DESCRIPTION\":\"This will enable the opioid functionality on the store\",\"VALUE\":\"N\"}, {\"DESCRIPTION\":\"Script Information About the Store\",\"VALUE\":\"Y\"}, {\"DESCRIPTION\":\"Ehealth Enabled Check\",\"VALUE\":\"Y\"}, {\"DESCRIPTION\":\"Central Fill Shared Service Indicator \",\"VALUE\":\"N\"}, {\"DESCRIPTION\":\"Store Prescription Images in Cloud\",\"VALUE\":\"Y\"}]"
+}
+{
+	"dateTime": "2021/03/23 08:00:37",
+	"uniqueid": "c7a21c8d-ed9f-4316-bd6e-b086b3ba7713",
+	"store": "3144",
+	"responseTime": 3,
+	"methodName": "count_tx",
+	"queryResults": "[{\"TRANSACTION_COUNT\":11}]"
+}
+{
+	"dateTime": "2021/03/31 12:20:06",
+	"store": "3144",
+	"methodName": "scheduled_container_metrics",
+	"soft_start_time": "Wed Mar 31 12:18:46 CST 2021",
+	"load_average": {
+		"1minute": 1.38,
+		"5minutes": 0.75,
+		"15minutes": 0.71
+	},
+	"cpu_details": {
+		"user": "65.83",
+		"nice": "0.00",
+		"sys": "12.92",
+		"idle": "19.42",
+		"irq": "0.00",
+		"steal": "0.00",
+		"io_wait": "1.83",
+		"soft_irq": "0.00"
+	},
+	"ram_details": {
+		"available_ram": "7.74",
+		"used_ram": "23.57",
+		"total_ram": "31.31",
+		"buffers_ram": "0.34",
+		"cached_ram": "11.68"
+	},
+	"disk_utilization": {
+		"/opt": "76",
+		"/opt/sdm/download": "59",
+		"/h": "91",
+		"/home": "80",
+		"/var/mqm/log": "7",
+		"/usr/director": "46",
+		"/": "18",
+		"/srv": "6",
+		"/tmp": "20",
+		"/var": "17"
+	},
+	"top_five_processes": [
+		{
+			"user": "csuser",
+			"name": "java",
+			"memory_usage": "0.90",
+			"cpu_usage": "227.45"
+		},
+		{
+			"user": "csuser",
+			"name": "java",
+			"memory_usage": "0.52",
+			"cpu_usage": "153.37"
+		},
+		{
+			"user": "csuser",
+			"name": "java",
+			"memory_usage": "0.52",
+			"cpu_usage": "149.21"
+		},
+		{
+			"user": "root",
+			"name": "java",
+			"memory_usage": "2.02",
+			"cpu_usage": "62.49"
+		},
+		{
+			"user": "db2inst1",
+			"name": "db2sysc",
+			"memory_usage": "15.99",
+			"cpu_usage": "27.20"
+		}
+	]
+}

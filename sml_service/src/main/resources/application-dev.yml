@@ -1,0 +1,91 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+      
+######Application & Processes Section#######
+      
+application:
+  cron-expression: 0 */10 * ? * *
+  service:
+      total: 3
+      1: eclipse
+      2: cyserver.exe
+      3: splunkd.exe
+
+  endpoint:
+    with-status:
+      total: 1
+      1:
+        name: config-server
+        endpoint: http://localhost:8080/actuator/health
+        with-details: false
+      
+    without-status:
+      total: 1
+      1:
+        name: ade-service
+        endpoint: http://localhost:8080/actuator/health
+        with-details: false
+      
+rest-template:
+  timeout:
+    read: 120
+    connect: 10000
+    
+######File Search Section#######
+
+log:
+  cron-expression: 0 */11 * ? * *
+  last-run-file: c:/temp/last_run_log.txt
+  file:
+    total: 1
+    1:
+      file-path: C:\Temp\McAfee\McAfee_Common_Hotfix_190514_VSCore_Install_All_21012020160718425.log
+      search: Persisted
+      exclude: setPersistedTelemetryInt
+
+
+######Database Section#######
+
+datasource:
+  #driver: com.ibm.db2.jcc.DB2Driver
+  #url: jdbc:db2://isp:50001/HWNG_DB
+  #username: db2inst1
+  #password: Db2in5st
+      
+db:
+  last-run-file: c:/temp/last_run_db.txt
+  max-row: 10
+  store-build-version:
+    search: select value from hw.store_preference where cdsp='BUILD_VERSION' with ur
+    key: VALUE
+  store-province:
+    search: select province_cdpr from hw.address where gead_id = 19999 with ur
+    key: PROVINCE_CDPR
+  long-term:
+    cron-expression: 0 0 0 * * ?
+    query:
+      total: 1
+      1:
+        search: select count(*) from employee
+        method-name: employee_count
+      
+  short-term:
+    cron-expression: 0 0 */1 ? * *
+    query:
+      total: 1
+      1:
+        search: select count(1) as TRANSACTION_COUNT from hw.tx where create_datetime >= <<last-run>> with ur
+        method-name: count_tx
+
+######Container Section#######
+        
+container-metrics:
+  #Cron to specify how often want the container metrics
+  cron-expression: 0 */6 * ? * *
+  #list all the drive path seperated by comma to check the disk space
+  drives: C,C:\Temp
+  #select the OS Type (windows or unix)
+  os-system: windows
+  

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="baseDir">C:/temp</Property>
+		<Property name="metricsFile">SOFT/soft_metrics</Property>
+		<Property name="consoleFile">SOFT_CONSOLE/soft_console</Property>
+	</Properties>
+    <Appenders>
+		<Console name="Console">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:sss}  %-5p --- [  %t] %c : %m%n</Pattern>
+			</PatternLayout>		
+		</Console>
+		<RollingFile name="roll-console" fileName="${baseDir}/${consoleFile}.log" filePattern="${baseDir}/${consoleFile}.%d{yyyy-MM-dd}.log" ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:sss}  %-5p --- [  %t] %c : %m%n</Pattern>
+			</PatternLayout>
+			<TimeBasedTriggeringPolicy/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+					<IfFileName glob="${consoleFile}.*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+		</RollingFile>
+		<RollingFile name="roll-by-time" fileName="${baseDir}/${metricsFile}.log" filePattern="${baseDir}/${metricsFile}.%d{yyyy-MM-dd}.log" ignoreExceptions="false">
+			<PatternLayout>
+				<Pattern>%m%n</Pattern>
+			</PatternLayout>
+			<TimeBasedTriggeringPolicy/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+					<IfFileName glob="${metricsFile}.*.log"/>
+                    <IfLastModified age="60d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+		</RollingFile>
+	</Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="roll-console"/>
+        </Root>
+		<Logger name="com.loblaw.metrics" level="DEBUG" additivity="false">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="roll-console"/>
+		</Logger>
+		<Logger name="rolling-appender" level="INFO" additivity="false">
+			<AppenderRef ref="roll-by-time"/>
+		</Logger>
+    </Loggers>
+
+</Configuration>

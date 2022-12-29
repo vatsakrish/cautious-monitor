@@ -1,0 +1,240 @@
+{
+   IP: 10.59.131.193
+   buildVersion: 21.1.0.21_1
+   dateTime: 2021/04/06 15:20:40
+   methodName: get
+   projectName: CloudStorage
+   province: ON
+   requestId: 1234
+   responseCode: 200
+   responseTime: 555
+   store: 3144
+   uniqueid: 799714da-41cd-42ec-8040-3b718660342e
+}
+{ 
+   dateTime: 2021/04/06 15:15:48
+   message: Custom message
+   store: 3144
+   uniqueid: b5bcee0a-a876-4f19-a79e-3a969361b97c
+}
+{ 
+   IP: 10.59.131.193
+   app_status: {"uaa-info": {"status":"DOWN","httpCode":200,"error":"NA"}, "report": {"status":"UP","httpCode":200,"error":"NA"}, "prescription": {"status":"UP","httpCode":200,"error":"NA"}, "pharmacy-channel-service": {"status":"UP","httpCode":200,"error":"NA"}, "mdp": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "ispilr": {"status":"UP","httpCode":200,"error":"NA"}, "ispil": {"status":"UP","httpCode":200,"error":"NA"}, "immunization": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "ieprocessor-health": {"status":"UP","httpCode":200,"error":"NA"}, "hw": {"status":"UP","httpCode":200,"error":"NA"}, "hda-healthwatchacl": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9392"}, "hda-eventrouter": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9393"}, "hda-event-processor": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9391"}, "dur": {"status":"UP","httpCode":200,"error":"NA"}, "dispillwebservices-health": {"status":"UP","httpCode":200,"error":"NA"}, "delta": {"status":"UP","httpCode":200,"error":"NA"}, "config-server": {"status":"UP","httpCode":200,"error":"NA"}, "claimutility-health": {"status":"UP","httpCode":200,"error":"NA"}, "cf-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9443"}, "ber": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "be-services": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "atlas-ehealth-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9398"}, "aggregation": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "action-event-service": {"status":"UP","httpCode":200,"error":"NA"}, "csjs": {"status":"UP","httpCode":200,"error":"NA"}, "csdf": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9253"}, "ade-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:8060"}}
+   buildVersion: 21.1.0.21_1
+   dateTime: 2021/04/07 13:50:31
+   methodName: scheduled_app_health
+   projectName: Application_Health_Metrics
+   province: ON
+   responseTime: 31752
+   store: 3144
+   tomcat_server_status: {"confTCServer": {"status":"UP"},"uaaTCServer": {"status":"UP"},"hwTCServer": {"status":"UP"},"imzTCServer": {"status":"UP"},"servicesTCServer": {"status":"UP"}}
+   uniqueid: c2a0b315-dc9a-4aea-a63a-712ea983c219
+}
+{ 
+   IP: 10.59.131.193
+   app_status: {"uaa-info": {"status":"DOWN","httpCode":200,"error":"NA"}, "report": {"status":"UP","httpCode":200,"error":"NA"}, "prescription": {"status":"UP","httpCode":200,"error":"NA"}, "pharmacy-channel-service": {"status":"UP","httpCode":200,"error":"NA"}, "mdp": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "ispilr": {"status":"UP","httpCode":200,"error":"NA"}, "ispil": {"status":"UP","httpCode":200,"error":"NA"}, "immunization": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "ieprocessor-health": {"status":"UP","httpCode":200,"error":"NA"}, "hw": {"status":"UP","httpCode":200,"error":"NA"}, "hda-healthwatchacl": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9392"}, "hda-eventrouter": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9393"}, "hda-event-processor": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9391"}, "dur": {"status":"UP","httpCode":200,"error":"NA"}, "dispillwebservices-health": {"status":"UP","httpCode":200,"error":"NA"}, "delta": {"status":"UP","httpCode":200,"error":"NA"}, "config-server": {"status":"UP","httpCode":200,"error":"NA"}, "claimutility-health": {"status":"UP","httpCode":200,"error":"NA"}, "cf-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9443"}, "ber": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "be-services": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "atlas-ehealth-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9398"}, "aggregation": {"status":"DOWN","httpCode":404,"error":"tml;charset=utf-8' not supported for bodyType=com.loblaw.metrics.shared.model.ApplicationHealth"}, "action-event-service": {"status":"UP","httpCode":200,"error":"NA"}, "csjs": {"status":"UP","httpCode":200,"error":"NA"}, "csdf": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:9253"}, "ade-service": {"status":"DOWN","httpCode":504,"error":"iled: Connection refused: isp/10.59.131.193:8060"}}
+   buildVersion: 21.1.0.21_1
+   dateTime: 2021/04/06 14:39:29
+   methodName: app_health
+   projectName: Application_Health_Metrics
+   province: ON
+   responseTime: 29660
+   store: 3144
+   tomcat_server_status: {"confTCServer": {"status":"UP"},"uaaTCServer": {"status":"UP"},"hwTCServer": {"status":"UP"},"imzTCServer": {"status":"UP"},"servicesTCServer": {"status":"UP"}}
+   uniqueid: 135819e7-4906-47ef-bac9-4a79244cf058
+}
+{ 
+   dateTime: 2021/04/07 13:00:00
+   methodName: count_tx
+   queryResults: [{"TRANSACTION_COUNT":0}]
+   responseCode: 200
+   responseTime: 10
+   store: 3144
+   uniqueid: 3a29da06-9f82-4115-bc64-0f2f81188f5b
+}
+{ 
+   dateTime: 2021/04/07 00:00:00
+   methodName: count_vip
+   queryResults: [{"VIP_FLAG":"Y","TOTAL":1955}]
+   responseCode: 200
+   responseTime: 22
+   store: 3144
+   uniqueid: f59054e0-9a8f-4d06-97ca-20b238c61d43
+}
+{ 
+   dateTime: 2021/04/07 00:00:00
+   methodName: store_details
+   queryResults: [{"LINE_ONE":"250 CHARLOTTE STREET","LINE_TWO":null,"CITY":"PETERBOROUGH","PROVINCE_CDPR":"ON","POSTAL_CODE":"K9J2V1","PRIMARY_PHONE_NO":"7057433541","ALTERNATE_PHONE_NO":null,"FAX_NO":"4164911021","ACTIVE_FLAG":"Y"}]
+   responseCode: 200
+   responseTime: 6
+   store: 3144
+   uniqueid: f5e564f8-0ccc-4035-bed7-a2603856f4ba
+}
+{ 
+   dateTime: 2021/04/07 00:00:00
+   methodName: store_features
+   queryResults: [{"DESCRIPTION":"CDR Enable Flag","VALUE":"Y"}, {"DESCRIPTION":"Version of latest code","VALUE":"21.1.0.21_1"}, {"DESCRIPTION":"Ehealth Enabled Check","VALUE":"N"}, {"DESCRIPTION":"This will enable the opioid functionality on the store","VALUE":"N"}, {"DESCRIPTION":"Script Information About the Store","VALUE":"Y"}, {"DESCRIPTION":"Central Fill Shared Service Indicator ","VALUE":"N"}, {"DESCRIPTION":"Store Prescription Images in Cloud","VALUE":"Y"}, {"DESCRIPTION":"Configuration To Enable Provincial DURs","VALUE":"N"}]
+   responseCode: 200
+   responseTime: 2
+   store: 3144
+   uniqueid: cd2f035f-be37-4627-a24f-d947408a1301
+}
+{ 
+   dateTime: 2021/04/06 14:55:34
+   methodName: custom_query
+   queryResults: [{"ASTOTAL":3018229}]
+   responseCode: 200
+   responseTime: 191
+   store: 3144
+   uniqueid: 28bd1553-1525-4d8d-90be-9cd44c32bf67
+}
+{ 
+   cpu_details: { 
+     idle: 89.90
+     io_wait: 0.00
+     irq: 0.00
+     nice: 0.00
+     soft_irq: 0.00
+     steal: 0.00
+     sys: 0.75
+     user: 9.35
+   }
+   dateTime: 2021/04/07 13:50:33
+   disk_utilization: { 
+     /: 18
+     /h: 81
+     /home: 81
+     /opt: 65
+     /opt/sdm/download: 59
+     /srv: 6
+     /tmp: 22
+     /usr/director: 79
+     /var: 17
+     /var/mqm/log: 7
+   }
+   load_average: { 
+     15minutes: 1.76
+     1minute: 3.5
+     5minutes: 1.97
+   }
+   methodName: scheduled_container_metrics
+   ram_details: { 
+     available_ram: 4.18
+     buffers_ram: 0.90
+     cached_ram: 9.10
+     total_ram: 31.31
+     used_ram: 27.14
+   }
+   soft_start_time: Tue Apr 06 12:12:05 EDT 2021
+   store: 3144
+   top_five_processes: [ 
+     { 
+       cpu_usage: 108.74
+       memory_usage: 11.94
+       name: java
+       user: wasadmin
+     }
+     { 
+       cpu_usage: 25.91
+       memory_usage: 1.88
+       name: java
+       user: wasadmin
+     }
+     { 
+       cpu_usage: 2.88
+       memory_usage: 17.45
+       name: db2sysc
+       user: db2inst1
+     }
+     { 
+       cpu_usage: 2.29
+       memory_usage: 0.30
+       name: oneagentos
+       user: root
+     }
+     { 
+       cpu_usage: 2.03
+       memory_usage: 2.92
+       name: java
+       user: wasadmin
+     }
+   ]
+}
+{ 
+   cpu_details: { 
+     idle: 90.38
+     io_wait: 0.00
+     irq: 0.00
+     nice: 0.00
+     soft_irq: 0.00
+     steal: 0.00
+     sys: 0.50
+     user: 9.11
+   }
+   dateTime: 2021/04/06 14:47:07
+   disk_utilization: { 
+     /: 18
+     /h: 81
+     /home: 81
+     /opt: 65
+     /opt/sdm/download: 59
+     /srv: 6
+     /tmp: 22
+     /usr/director: 84
+     /var: 17
+     /var/mqm/log: 7
+   }
+   load_average: { 
+     15minutes: 1.5
+     1minute: 1.17
+     5minutes: 1.31
+   }
+   methodName: container_metrics
+   ram_details: { 
+     available_ram: 5.18
+     buffers_ram: 0.76
+     cached_ram: 9.28
+     total_ram: 31.31
+     used_ram: 26.14
+   }
+   soft_start_time: Tue Apr 06 12:12:05 EDT 2021
+   store: 3144
+   top_five_processes: [ 
+     { 
+       cpu_usage: 110.98
+       memory_usage: 11.13
+       name: java
+       user: wasadmin
+     }
+     { 
+       cpu_usage: 27.06
+       memory_usage: 1.78
+       name: java
+       user: wasadmin
+     }
+     { 
+       cpu_usage: 2.91
+       memory_usage: 17.37
+       name: db2sysc
+       user: db2inst1
+     }
+     { 
+       cpu_usage: 2.26
+       memory_usage: 0.29
+       name: oneagentos
+       user: root
+     }
+     { 
+       cpu_usage: 2.04
+       memory_usage: 2.82
+       name: java
+       user: wasadmin
+     }
+   ]
+}
+{ 
+   dateTime: 2021/04/07 13:50:33
+   fileName: catalina.2021-04-07.log
+   message: 07-Apr-2021 13:50:00.071 INFO [https-jsse-nio-7006-exec-15] brave.Tracing$LoggingReporter.report {"traceId":"043ab3c0023e2e5e","id":"043ab3c0023e2e5e","kind":"SERVER","name":"post","timestamp":1617817800070064,"duration":1337,"localEndpoint":{"serviceName":"hw-prescription","ipv4":"10.59.131.193"},"remoteEndpoint":{"ipv4":"10.59.131.193","port":54675},"tags":{"http.method":"POST","http.path":"/prescription/RxService"}}
+   store: 3144
+}

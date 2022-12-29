@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: storemetrics
+  cloud:
+    config:
+      uri: http://isp:7015/config-server

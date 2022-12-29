@@ -1,0 +1,322 @@
+swagger: '2.0'
+info:
+  description: Seraph Observability Falcon Tool API
+  version: 1.0.0
+  title: SOFT API
+  contact:
+    name: Team Falcon
+    email: Falcon@mtcad.onmicrosoft.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: 'localhost:8080'
+basePath: /v1
+tags:
+  - name: metrics-controller
+    description: Metrics pertaining to the store's health
+paths:
+  /apphealthmetrics:
+    get:
+      tags:
+        - metrics-controller
+      summary: Extract and send application health metrics to Splunk
+      operationId: apphealthmetricsUsingGET
+      produces:
+        - 'text/plain;charset=UTF-8'
+      responses:
+        '200':
+          description: Application health metrics sucessfully extracted and sent to Splunk
+          schema:
+            $ref: "#/definitions/OutAppReq"
+        '500':
+          description: Unexpected error occurred
+          examples:
+            'text/plain;charset=UTF-8': Unexpected error extracting application health metrics   
+          schema:
+            type: string
+  /appmetrics:
+    post:
+      tags:
+        - metrics-controller
+      summary: Send application metrics to Splunk
+      operationId: appmetricsUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - 'text/plain;charset=UTF-8'
+      parameters:
+        - in: body
+          name: request
+          description: AppReq object containing application's metric details
+          required: true
+          schema:
+            $ref: '#/definitions/AppReq'
+      responses:
+        '202':
+          description: Application metric sucessfully sent to Splunk
+          examples:
+            'text/plain;charset=UTF-8': Application metric successfully sent to Splunk
+  /containerhealthmetrics:
+    get:
+      tags:
+        - metrics-controller
+      summary: Extract server container metrics
+      operationId: containerhealthmetricsUsingGET
+      produces:
+        - 'text/plain;charset=UTF-8'
+      parameters:
+        - name: sendToSplunk
+          in: query
+          description: 'True to send query results to Splunk, otherwise only return the results'
+          required: false
+          type: string
+          default: 'false'
+      responses:
+        '200':
+          description: Container health metrics sucessfully extracted
+          schema:
+            $ref: '#/definitions/OutContainerRes'
+        '500':
+          description: Unexpected error occurred
+          examples:
+            'text/plain;charset=UTF-8': Unexpected error extracting container health metrics   
+          schema:
+            type: string
+  /datatosplunk:
+    get:
+      tags:
+        - metrics-controller
+      summary: Send custom message to Splunk
+      operationId: dataToSplunkUsingGET
+      produces:
+        - 'text/plain;charset=UTF-8'
+      parameters:
+        - name: message
+          in: query
+          description: Message to send send to Splunk
+          required: true
+          type: string
+          x-example: Custom message
+      responses:
+        '202':
+          description: Custom message sucessfully sent to Splunk
+          examples:
+            'text/plain;charset=UTF-8': Message successfully sent to Splunk
+        '400':
+          description: Empty message was supplied
+          examples:
+            'text/plain;charset=UTF-8': Empty message was supplied
+          schema:
+            type: string
+  /getdbdata:
+    get:
+      tags:
+        - metrics-controller
+      summary: Execute SQL query and extract results
+      operationId: databaseQueriesUsingGET
+      produces:
+        - 'text/plain;charset=UTF-8'
+      parameters:
+        - name: query
+          in: query
+          description: SQL query to execute and extract
+          required: true
+          type: string
+          x-example: SELECT COUNT(*) as Total FROM TX
+        - name: sendToSplunk
+          in: query
+          description: 'True to send query results to Splunk, otherwise only return the results'
+          required: false
+          type: string
+          default: 'false'
+      responses:
+        '200':
+          description: Database query sucessfully extracted
+          examples:
+            'text/plain;charset=UTF-8': '[{"Field": "string"}]'
+          schema:
+            type: array
+            items:
+              type: object
+        '400':
+          description: Invalid SQL query supplied
+          examples:
+            'text/plain;charset=UTF-8': Error with SQL query
+          schema:
+            type: string
+        '500':
+          description: Unexpected error occurred
+          examples:
+            'text/plain;charset=UTF-8': Unexpected error extracting SQL query
+          schema:
+            type: string
+  /logextractor:
+    get:
+      tags:
+        - metrics-controller
+      summary: Extract logs and send to Splunk
+      operationId: logExtractorUsingGET
+      produces:
+        - 'text/plain;charset=UTF-8'
+      parameters:
+        - name: excludeKeywords
+          in: query
+          description: Comma separated list of keywords to filter logs with and exclude
+          required: false
+          type: string
+          x-example: POSService
+        - name: filePath
+          in: query
+          description: Absolute path to the log file to extract logs from
+          required: true
+          type: string
+          x-example: 'C:/logs/catalina.log'
+        - name: searchKeywords
+          in: query
+          description: Comma separated list of keywords to search logs for and retain
+          required: true
+          type: string
+          x-example: brave.tracing
+      responses:
+        '200':
+          description: Successful log extraction
+          examples:
+            'text/plain;charset=UTF-8': Logs successfully extracted and sent to Splunk
+          schema:
+            type: string
+        '400':
+          description: Invalid filePath supplied
+          examples:
+            'text/plain;charset=UTF-8': Error from reading log file at filePath
+          schema:
+            type: string         
+        '500':
+          description: Unexpected error occurred
+          examples:
+            'text/plain;charset=UTF-8': Unexpected error extracting logs from filePath
+          schema:
+            type: string
+definitions:
+  OutAppReq:
+    type: object
+    properties:
+      dateTime:
+        type: string   
+      uniqueId: 
+        type: string
+      projectName:
+        type: string
+      store:
+        type: string
+      province:
+        type: string
+      responseTime:
+        type: integer
+        format: int64
+      methodName:
+       type: string
+      buildVersion:
+        type: string
+      app_status:
+        type: string
+  AppReq:
+    type: object
+    required:
+      - data
+      - methodName
+      - projectName
+    properties:
+      data:
+        type: string
+      methodName:
+        type: string
+      projectName:
+        type: string
+      province:
+        type: string
+      requestId:
+        type: string
+      responseCode:
+        type: integer
+        format: int64
+      responseTime:
+        type: integer
+        format: int64
+    title: AppReq
+  OutContainerRes:
+    type: object
+    properties:
+      dateTime:
+        type: string
+      store:
+        type: string
+      methodName:
+        type: string
+      soft_start_time:
+        type: string
+      load_average:
+        $ref: "#/definitions/LoadAverage"
+      cpu_details:
+        $ref: "#/definitions/CpuDetails"
+      ram_details:
+        $ref: "#/definitions/RamDetails"
+      disk_utilization:
+        type: object
+        example: {"drive": "string"}
+      top_five_processes:
+        type: array
+        items: 
+          $ref: "#/definitions/ContainerProcess"
+  LoadAverage:
+    type: object
+    properties:
+      1minute:
+        type: number
+      5minutes:
+        type: number
+      15minutes:
+        type: number
+  CpuDetails:
+    type: object
+    properties:
+      user:
+        type: string
+      nice: 
+        type: string
+      sys: 
+        type: string
+      idle:
+        type: string
+      irq:
+        type: string
+      steal:
+        type: string
+      io_wait:
+        type: string
+      soft_irq:
+        type: string
+  RamDetails:
+    type: object
+    properties:
+      available_ram:
+        type: string
+      used_ram:
+        type: string
+      total_ram:
+        type: string
+      buffers_ram: 
+        type: string
+      cached_ram:
+        type: string
+  ContainerProcess:
+    type: object
+    properties:
+      user:
+        type: string
+      name:
+        type: string
+      memory_usage: 
+        type: string
+      cpu_usage:
+        type: string
+      

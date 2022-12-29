@@ -1,0 +1,37 @@
+# Logging
+logging:
+  level:
+    root: info
+    com:
+      loblaw:
+        metrics: trace
+        sdm:
+          hw:
+            cloudstorageclient:
+              config:
+                rmq: trace
+
+# Spring Cloud binding for RabbitMQ
+spring:
+  cloud:
+    stream:
+      bindings:
+        store-metrics-producer-create:
+          destination: store.metrics.create.event.hcs-dev.topic
+          contentType: application/json
+
+message:
+  queue:
+    rabbit:
+      channel: store-metrics-producer-create
+
+# Actuator endpoint
+management:
+    endpoint:
+      health:
+        show-details: always
+
+# Info endpoint
+info:
+  app:
+    version: @project.version@
